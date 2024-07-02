@@ -76,9 +76,25 @@ fetch(json_url)
             } else {
                 a[i].style.display = "none";
             }
+            if(search_input.value == 0){
+                search.style.visibility = "hidden";
+                search.style.opacity = 0;
+            }
             // console.log(b);
         }
 
+    });
+
+    let video = document.getElementsByTagName('video')[0];
+    let play = document.getElementById('play');
+    play.addEventListener('click', () => {
+        if(video.paused) {
+            video.play();
+            play.innerHTML = `Play <i class="fa-solid fa-pause"></i>`
+        } else {
+            play.innerHTML = `Play <i class="fa-solid fa-play"></i>`
+            video.pause();
+        }
     })
 });
 
