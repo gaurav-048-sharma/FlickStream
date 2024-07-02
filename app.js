@@ -17,7 +17,7 @@ fetch(json_url)
 
 .then(Response => Response.json())
 .then((data) => { 
-    console.log(data[1]);
+    // console.log(data[1]);
     data.forEach((ele, i) => {
         let {name, imdm, date, sposter, bposter, genre, url} = ele;
         let card = document.createElement('a');
@@ -62,11 +62,24 @@ fetch(json_url)
     });
 
     // search filter
-    // search_input.addEventListener("keyup" ,() => {
-    //     let filter = search_input.value.toUpperCase();
-    //     lat a = search
+    search_input.addEventListener("keyup" ,() => {
+        let filter = search_input.value.toUpperCase();
+        let a = search.getElementsByTagName('a');
+        for (let i = 0; i < a.length; i++) {
+            let b = a[i].getElementsByClassName('cont')[0];
+            let textValue = b.textContent || a.textContent;
+            if(textValue.toUpperCase().indexOf(filter) > -1) {
+                // a[i].style.display = "";
+                a[i].style.display = "flex";
+                search.style.visibility = "visible";
+                search.style.opacity = 1;
+            } else {
+                a[i].style.display = "none";
+            }
+            // console.log(b);
+        }
 
-    // })
+    })
 });
 
     
