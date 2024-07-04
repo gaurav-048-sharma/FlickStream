@@ -32,11 +32,24 @@
     "bposter": "img/jhon wick1.webp",
     "genre": "Action",
     "type": "movie",
-    "url": "jhon wick.html",
+    "url": "john wick.html",
     "trailer": "john wick trailer.mp4",
     "low": "video/Jhon Wick 480ph.mp4",
     "medium": "video/Jhon Wick 720ph.mp4",
     "high": "video/Jhon Wick 1080ph.mp4"
+}, {
+    "name": "Jurassic World",
+    "imdb": 8.0,
+    "date": "2022",
+    "sposter": "img/jurassic world.jpg",
+    "bposter": "img/jurassic world1.jpg",
+    "genre": "Action",
+    "type": "movie",
+    "url": "jurassic world.html",
+    "trailer": "john wick trailer.mp4",
+    "low": "video/jurassic world 480ph.mp4",
+    "medium": "video/jurassic world 720ph.mp4",
+    "high": "video/jurassic world 1080ph.mp4"
 }, {
     "name": "Ant Man",
     "imdb": 8.9,
@@ -154,20 +167,7 @@
     "low": "video/topgun 480ph.mp4",
     "medium": "video/topgun 720ph.mp4",
     "high": "video/topgun 1080ph.mp4"
-}, {
-    "name": "Jurassic World",
-    "imdb": 8.0,
-    "date": "2022",
-    "sposter": "img/jurassic world.jpg",
-    "bposter": "img/jurassic world1.jpg",
-    "genre": "Action",
-    "type": "movie",
-    "url": "jurassic world.html",
-    "trailer": "john wick trailer.mp4",
-    "low": "video/jurassic world 480ph.mp4",
-    "medium": "video/jurassic world 720ph.mp4",
-    "high": "video/jurassic world 1080ph.mp4"
-}, {
+},  {
     "name": "Eternals",
     "imdb": 9.0,
     "date": "2022",

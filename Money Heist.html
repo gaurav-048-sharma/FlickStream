@@ -92,21 +92,23 @@
     <script src="./app.js"></script>
 
     <script >
-        fetch(json_url).then((Response) => Response.json)
-        .then(data => {
-            let movies_arr = data.filter(element => {
-                return element.name === "The Boys";
-            });
-            document.getElementById('title').innerText = movies_arr[0].name;
-            document.getElementsByTagName('video')[0].setAttribute('src', movies_arr[0].trailer)
-            document.getElementsByTagName('video')[0].play();
-            document.getElementById('medium_q').href = movies_arr[0].medium;
-            document.getElementById('high_q').href = movies_arr[0].high;
-            document.getElementById('gen').innerText = movies_arr[0].genre;
-            document.getElementById('date').innerText = movies_arr[0].date;
+        
+
+        fetch(json_url)
+        
+        .then(Response => Response.json())
+        .then((data) => {
+            document.getElementById('title').innerText = data[1].name;
+            document.getElementById('gen').innerText = data[1].genre;
+            document.getElementById('date').innerText = data[1].date;
             document.getElementById('rate').innerHTML = `
-            <span>IMDB</span><i class="fa-solid fa-star"></i>${movies_arr[0].imdb}`;
+            <span>IMDB</span><i class="fa-solid fa-star"></i>${data[1].imdb}`;
+
         })
+
+    
+        
+      
     </script>
 </body>
 </html>
