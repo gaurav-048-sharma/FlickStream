@@ -95,15 +95,68 @@ fetch(json_url)
             play.innerHTML = `Play <i class="fa-solid fa-play"></i>`
             video.pause();
         }
-    })
+    });
+
+    let series = document.getElementById("series");
+    let movies = document.getElementById("movies");
+    series.addEventListener('click', () => {
+        cards.innerHTML = '';
+        // window.location.href = "series.html";
+        let series_arr = data.filter(element => {
+            return element.type === "series";
+        });
+
+        series_arr.forEach((ele, i) => {
+            let {name, imdm, date, sposter, bposter, genre, url} = ele;
+            let card = document.createElement('a');
+            card.classList.add('card');
+            card.href = url;
+            card.innerHTML = `
+            <img class="poster" src="${sposter}" alt="${name}">
+                        <div class="rest-card">
+                            <img src="${bposter}" alt="">
+                            <div class="cont">
+                                <h4>${name}</h4>
+                                <div class="sub">
+                                    <p>${genre} , ${date}</p>
+                                    <h3><span>IMDB</span><i class="fa-solid fa-star"></i>${imdm}</h3>
+                                </div>
+                            </div>
+                        </div>
+            `
+            cards.appendChild(card);
+        });
+    });
+
+    movies.addEventListener('click', () => {
+        cards.innerHTML = '';
+        // window.location.href = "series.html";
+        let movies_arr = data.filter(element => {
+            return element.type === "movie";
+        });
+
+        movies_arr.forEach((ele, i) => {
+            let {name, imdm, date, sposter, bposter, genre, url} = ele;
+            let card = document.createElement('a');
+            card.classList.add('card');
+            card.href = url;
+            card.innerHTML = `
+            <img class="poster" src="${sposter}" alt="${name}">
+                        <div class="rest-card">
+                            <img src="${bposter}" alt="">
+                            <div class="cont">
+                                <h4>${name}</h4>
+                                <div class="sub">
+                                    <p>${genre} , ${date}</p>
+                                    <h3><span>IMDB</span><i class="fa-solid fa-star"></i>${imdm}</h3>
+                                </div>
+                            </div>
+                        </div>
+            `
+            cards.appendChild(card);
+        });
+    });
+    
+         
+       
 });
-
-    
-
-    
-
-
-
-
-
-let p = document.getElementsByClassName("para");

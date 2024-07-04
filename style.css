@@ -15,8 +15,8 @@ body {
 }
 header {
     position: relative;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     /* border: 2px solid #fff; */
     border-radius: 28px;
     overflow: hidden;
@@ -51,13 +51,13 @@ header video {
 }
 
 header nav {
-    width: 94%;
+    width: 100%;
     height: 10%;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 50px;
+    /* padding: 0px 50px; */
 }
 header  nav .logo_ul{
     display: flex;
@@ -301,7 +301,7 @@ header section{
 }
 header section .cards {
     position: relative;
-    width: 100%;
+    width: 97%;
     height: 200px;
 /*    
     border: 1px solid #fff; */
@@ -433,3 +433,53 @@ header section:hover .fa-chevron-left {
     opacity: 1;
 }
 
+@media screen and (max-width:1250px) {
+    header video {
+        position: absolute;
+        width: 200%;
+        height: 180%;
+    }
+}
+@media screen and (max-width:671px) {
+    header {
+        
+        width: 100%;
+        height: 100%;
+       
+    }
+    header nav {
+        height: 15%;
+        /* padding: 0px px; */
+
+    } 
+    header .content {
+        padding-left: 10px;
+    
+    }
+    header section{
+        left: -42px;
+        bottom: 100px;
+        padding-left: 0px 10px;
+        
+    }
+    header  nav .logo_ul ul{
+        position: absolute;
+        top: 0px;
+        left: 10px;
+    }
+    header  nav .logo_ul li {
+        padding: 3px 5px;
+    }
+    header  nav .logo_ul li a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:780px){
+    header video {
+        position: absolute;
+        width: 420%;
+        height: 180%;
+        left: -50%;
+    }
+}
