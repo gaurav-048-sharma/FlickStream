@@ -12,7 +12,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: scroll;
+    overflow-y: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 header {
     position: relative;
@@ -380,8 +383,9 @@ header section .cards .card .rest-card .cont {
 }
 header section .cards .card .rest-card .cont .sub {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    margin-right: 10px;
 }
 header section .cards .card .rest-card .cont .sub p {
     font-size: 12px;

@@ -19,7 +19,7 @@ fetch(json_url)
 .then((data) => { 
     // console.log(data[1]);
     data.forEach((ele, i) => {
-        let {name, imdm, date, sposter, bposter, genre, url} = ele;
+        let {name, imdb, date, sposter, bposter, genre, url} = ele;
         let card = document.createElement('a');
         card.classList.add('card');
         card.href = url;
@@ -31,7 +31,7 @@ fetch(json_url)
                             <h4>${name}</h4>
                             <div class="sub">
                                 <p>${genre} , ${date}</p>
-                                <h3><span>IMDB</span><i class="fa-solid fa-star"></i>${imdm}</h3>
+                                <h3><span>IMDB</span><i class="fa-solid fa-star"></i>${imdb}</h3>
                             </div>
                         </div>
                     </div>
